@@ -21,6 +21,8 @@ The goal of this project is not only to learn Java syntax, but also to build a s
 - Obsidian
 - Cursor AI
 
+---
+
 # Learning Approach
 
 This repository follows a personalized AI-assisted training workflow focused on:
