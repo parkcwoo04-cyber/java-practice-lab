@@ -181,5 +181,5 @@ Java_Practice_Lab/
 │   ├── reflections/   # Reflection-based learning logs
 │   └── concepts/      # Java concept summaries
 ├── projects/          # Mini projects and long-term applications
-├── resources/         # Learning resources and references
+└── resources/         # Learning resources and references
 ```
