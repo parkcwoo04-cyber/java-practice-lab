@@ -1,42 +1,49 @@
-# Objective
-This repository documents my Java learning journey through adaptive coding exercises and AI-assisted practice.
+# AI-Assisted Java Learning System
 
-# Learning Approach
-- Personalized exercises
-- Reflection-based learning
-- Weakness tracking
-- Incremental difficulty progression
+This repository documents my Java learning journey through adaptive coding exercises, reflection-based learning, and AI-assisted practice workflows.
+
+The goal of this project is not only to learn Java syntax, but also to build a strong foundation by progressing step-by-step from the fundamentals. Rather than rushing into advanced topics, this system focuses on developing:
+- structured problem-solving habits
+- structured problem-solving habits
+- clean coding practices
+- debugging skills
+- reflection-driven learning workflows
+- long-term software development discipline
+
+---
 
 # Technologies Used
+
 - Java
 - IntelliJ IDEA
-- Git/GitHub
+- Chat GPT
+- Git & GitHub
 - Obsidian
 - Cursor AI
 
-# AI-Assisted Java Learning System
+# Learning Approach
 
-This repository documents my Java learning journey through a structured AI-assisted practice system.
-
-Instead of only solving random coding problems, I built a personalized learning workflow focused on:
-- adaptive practice generation
-- reflection-based learning
+This repository follows a personalized AI-assisted training workflow focused on:
+- adaptive exercise generation
 - weakness tracking
 - incremental difficulty progression
+- reflection-based improvement
 - long-term knowledge organization
 
-The goal of this project is not only to learn Java syntax, but also to develop problem-solving habits, clean coding practices, and a structured learning system similar to real software development workflows.
+Instead of solving random coding problems, exercises are designed to match my current learning scope and gradually increase in complexity.
+
+---
 
 # Practice System
 
-The exercises in this repository are generated through a personalized AI-assisted training workflow.
+The exercises in this repository are generated through a structured AI-assisted learning process.
 
 Problems are designed to:
-- match my current learning scope
+- match my current learning level
 - avoid concepts that have not yet been studied
 - focus on practical Java fundamentals
 - remain solvable within 20–30 minutes
-- gradually increase in complexity
+- reinforce weak concepts through targeted repetition
 
 Each exercise follows a structured format including:
 - Class Name
@@ -48,7 +55,9 @@ Each exercise follows a structured format including:
 - Example Output
 - Learning Objectives
 
-Difficulty is based on problem complexity rather than only on Java concepts.
+Difficulty is based on overall problem complexity rather than only on Java concepts.
+
+---
 
 # Reflection-Based Learning
 
@@ -69,6 +78,8 @@ Example reflection topics include:
 - loop boundary mistakes
 - conditional logic errors
 
+---
+
 # Weakness Tracking
 
 This learning system tracks recurring mistakes and weak areas across exercises.
@@ -80,18 +91,27 @@ Rather than immediately moving to harder topics, reinforcement exercises are gen
 - code readability
 - problem decomposition
 
-This allows gradual and consistent improvement instead of shallow problem completion.
+The objective is to build consistent understanding rather than shallow problem completion.
+
+---
+
+# AI-Assisted Workflow
+
+AI tools are used to:
+- generate adaptive exercises
+- analyze current learning scope
+- identify recurring weaknesses
+- review submitted solutions
+- adjust difficulty dynamically
+- reinforce weak concepts through targeted practice
+
+The focus is not automation for convenience, but using AI as a structured learning assistant.
+
+---
 
 # Knowledge Management Workflow
 
 This repository is part of a larger personal knowledge management system.
-
-Tools currently used:
-- Java
-- IntelliJ IDEA
-- Git & GitHub
-- Obsidian
-- AI-assisted practice generation tools
 
 Workflow:
 1. Study Java concepts
@@ -100,3 +120,15 @@ Workflow:
 4. Review and analyze mistakes
 5. Write reflections and concept notes
 6. Archive reusable knowledge and recurring issues
+
+---
+
+# Repository Structure
+
+```text
+java-practice-lab/
+├── exercises/
+├── reflections/
+├── concept-notes/
+├── common-mistakes/
+└── mini-projects/
