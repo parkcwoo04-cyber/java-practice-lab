@@ -1,4 +1,4 @@
-package src.May_2026;
+package src.May_2026.Week_3;
 
 /*
 ReadMe
