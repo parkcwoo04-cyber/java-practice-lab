@@ -8,7 +8,7 @@ Estimated Time: 20 minutes
 
 Actual Time Taken: 25 minutes
 
-Written by: Chanwoo Parkdd
+Written by: Chanwoo Park
 
 ---
 
