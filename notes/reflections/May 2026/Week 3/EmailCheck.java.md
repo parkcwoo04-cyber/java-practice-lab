@@ -1,4 +1,16 @@
 
+
+Class Name: EmailCheck
+
+Difficulty: Level 1 — Guided Basics
+
+Estimated Time: 10 -15 minutes
+
+Actual Time Taken: 15 minutes
+
+Written by: Chanwoo Park
+
+---
 ## Goal
 
 Practice basic String analysis using common String methods.

@@ -1,4 +1,4 @@
-package may_2026;
+package src.May_2026;
 
 /*
 ReadMe
@@ -9,7 +9,7 @@ Difficulty: Level 1 — Guided Basic
 
 Estimated Time: 10–15 minutes
 
-Actual Time Taken:
+Actual Time Taken: 15 minutes
 
 Written by: Chanwoo Park
 
