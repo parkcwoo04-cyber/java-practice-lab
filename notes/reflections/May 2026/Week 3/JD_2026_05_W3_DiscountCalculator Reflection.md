@@ -85,4 +85,3 @@ I also learned that I should test different cases, such as member and non-member
 - [[2. Operator#Ternary Operator|ternary operator]]
 - [[1. Data Type and Variables#How to Print 2 Decimal Points of `double`|System.out.printf()]]
 - [[3. String#Commonly Used Escape Characters|escape character]]
-- 
