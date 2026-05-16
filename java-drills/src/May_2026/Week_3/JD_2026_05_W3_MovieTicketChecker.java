@@ -4,7 +4,6 @@ ReadMe
 
 Drill ID: JD-2026-05-W3-MovieTicketChecker
 
-
 Class Name: MovieTicketChecker
 
 Difficulty: Level 3 — Multi-Step Problem
