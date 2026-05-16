@@ -4,7 +4,7 @@
 
 Drill ID: JD_2026_05_W3_DiscountCalculator
 
-Linked code: [View Java Code](../../../java-drills/src/May_2026/Week_3/JD_2026_05_W3_DiscountCalculator.java)
+Linked code: [View Java Code](../../../../java-drills/src/May_2026/Week_3/JD_2026_05_W3_DiscountCalculator.java)
 
 Class Name: DiscountCalculator
 
