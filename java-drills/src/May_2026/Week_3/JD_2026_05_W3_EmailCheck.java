@@ -3,6 +3,8 @@ package src.May_2026.Week_3;
 /*
 ReadMe
 
+Drill ID: JD-2026-05-W3-EmailCheck
+
 Class Name: EmailCheck
 
 Difficulty: Level 1 — Guided Basic
@@ -26,7 +28,7 @@ Learning Objective
 Practice using basic String methods to analyze text data.
 */
 
-public class EmailCheck {
+public class JD_2026_05_W3_EmailCheck {
     public static void main(String[] args) {
 
         String email = "parkcwoo04admin@gmail.com";

@@ -2,6 +2,9 @@ package src.May_2026.Week_3;
 /*
 ReadMe
 
+Drill ID: JD-2026-05-W3-MovieTicketChecker
+
+
 Class Name: MovieTicketChecker
 
 Difficulty: Level 3 — Multi-Step Problem
@@ -46,7 +49,7 @@ performing step-by-step calculations,
 and using String comparison correctly in Java.
 */
 
-public class MovieTicketChecker {
+public class JD_2026_05_W3_MovieTicketChecker {
 
     public static void main(String[] args) {
 

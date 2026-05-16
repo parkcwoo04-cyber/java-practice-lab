@@ -2,6 +2,8 @@ package src.May_2026.Week_3;
 /*
 ReadMe
 
+Drill ID: JD-2026-05-W3-DiscountCalculator
+
 Class Name: DiscountCalculator
 
 Difficulty: Level 2 — Simple Application
@@ -34,7 +36,7 @@ Practice using variables, arithmetic operators, comparison operators,
 logical operators, and conditional logic in a simple calculation program.
 */
 
-public class DiscountCalculator {
+public class JD_2026_05_W3_DiscountCalculator {
     public static void main(String[] args) {
         int price = 120000;
         System.out.println("Product Price: " + price); // printing product price
