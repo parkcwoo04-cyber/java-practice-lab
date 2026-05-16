@@ -53,9 +53,8 @@ Different String methods analyze text differently depending on their purpose.
 
 ## Related Java Concepts
 
-- [String]
-- [[length()]]
-- [[contains()]]
-- [[startsWith()]]
-- [[System.out.println()]]
+- [[3. String|String]]
+- [[3. String#Measuring the Length of a String|length()]]
+- [[3. String#Detecting Whether the String Contains a Specific Substring|contains()]]
+- [[3. String#Verifying Whether the String Starts/Ends with the Substring|startsWith()]]
 

@@ -1,3 +1,7 @@
+---
+github_repo: parkcwoo04-cyber|java-practice-lab
+github_issue: 2
+---
 
 
 Class Name: DiscountCalculator
@@ -70,11 +74,13 @@ I also learned that I should test different cases, such as member and non-member
 
 ## Related Java Concepts
 
-- int
-- boolean
-- double
-- arithmetic operators
-- comparison operators
-- logical operators
-- ternary operator
-- System.out.printf()
+- [[1. Data Type and Variables#Types of Data|int]]
+- [[1. Data Type and Variables#Types of Data|boolean]]
+- [[1. Data Type and Variables#Types of Data|double]]
+- [[2. Operator#Arithmetic Operator|arithmetic operators]]
+- [[2. Operator#Comparison Operator|comparison operators]]
+- [[2. Operator#Logical Operator|logical operators]]
+- [[2. Operator#Ternary Operator|ternary operator]]
+- [[1. Data Type and Variables#How to Print 2 Decimal Points of `double`|System.out.printf()]]
+- [[3. String#Commonly Used Escape Characters|escape character]]
+- 
