@@ -1,7 +1,3 @@
----
-github_repo: parkcwoo04-cyber|java-practice-lab
-github_issue: 2
----
 
 
 Class Name: DiscountCalculator
