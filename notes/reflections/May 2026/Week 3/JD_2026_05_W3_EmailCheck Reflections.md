@@ -1,5 +1,11 @@
 
 
+## Metatdata
+
+Drill ID: JD_2026_05_W3_EmailCheck
+
+Linked code: [View Java Code](../../../java-drills/src/May_2026/Week_3/JD_2026_05_W3_EmailCheck.java)
+
 Class Name: EmailCheck
 
 Difficulty: Level 1 — Guided Basics

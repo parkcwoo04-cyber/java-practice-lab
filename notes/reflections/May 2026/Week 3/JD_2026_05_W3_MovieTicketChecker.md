@@ -1,5 +1,11 @@
 
 
+## Metadata
+
+Drill ID: JD_2026_05_W3_MovieTicketChecker
+
+Linked code: [View Java Code](../../../java-drills/src/May_2026/Week_3/JD_2026_05_W3_MovieTicketChecker.java)
+
 Class Name: MovieTicketChecker.java
 
 Difficulty: Level 3 — Multi-Step Problem
