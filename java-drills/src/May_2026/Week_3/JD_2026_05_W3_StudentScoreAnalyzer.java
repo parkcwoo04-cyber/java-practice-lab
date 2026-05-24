@@ -1,7 +1,4 @@
 package src.May_2026.Week_3;
-
-import java.util.Scanner;
-
 /*
 ReadMe
 
