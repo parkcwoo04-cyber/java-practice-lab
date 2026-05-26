@@ -125,4 +125,4 @@ Logic that depends on a full row should usually be placed after the inner loop f
 - [[5. Loop Statement#nested loop|Nested Loop]]
 - [[6. Array#Multidimensional Array|Two-Dimensional Array]]
 - [[6. Array#Array list|Array]]
-- [[3. String#Comparing Strings|.eqauls()]]
+- [[3. String#Comparing Strings|.equals()]]
