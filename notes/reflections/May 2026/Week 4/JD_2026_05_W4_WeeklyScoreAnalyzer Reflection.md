@@ -4,6 +4,8 @@
 
 Drill ID: JD_2026_05_W4_WeeklyScoreAnalyzer
 
+Linked code: [View Java Code](../../../../java-drills/src/May_2026/Week_4/JD_2026_05_W4_WeeklyScoreAnalyzer.java)
+
 Class Name: WeeklyScoreAnalyzer
 
 Difficulty: Level 3 — Multi-Step Problem
