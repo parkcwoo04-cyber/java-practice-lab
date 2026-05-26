@@ -80,5 +80,6 @@ public class JD_2026_05_W4_CinemaSeatReport {
         System.out.println("Total Reserved Seats: " + totalReserved);
         System.out.println("Most Reserved Row: " + mostReservedRow);
         System.out.println("Reserved seats in That Row: " + mostReservedCount);
+        System.out.println();
     }
 }
