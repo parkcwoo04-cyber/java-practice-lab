@@ -90,8 +90,6 @@ Separating logic into methods makes the program easier to read and maintain.
 
 ---
 
-  
-
 ## Related Java Concepts
 
   - [[7. Method#Return value|Return Value]]
