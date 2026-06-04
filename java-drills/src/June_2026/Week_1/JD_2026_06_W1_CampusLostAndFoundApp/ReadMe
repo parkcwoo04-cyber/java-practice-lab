@@ -1,0 +1,28 @@
+ReadMe
+
+Drill ID = JD_2026_06_W1_CampusLostAndFound
+
+Class Name: CampusLostAndFoundApp
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 45–60 minutes
+
+Actual Time Taken: 47 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a campus lost-and-found program that manages lost items, searches by keyword,
+updates claim status, and counts unclaimed items.
+
+Requirements
+- Use at least 3 classes.
+- Store multiple LostItem objects in an array.
+- Search by item name or found location.
+- Mark an item as claimed by owner name.
+- Count remaining unclaimed items.
+
+Learning Objective
+Practice object collaboration, array traversal, String comparison, conditional logic,
+and object state updates.
