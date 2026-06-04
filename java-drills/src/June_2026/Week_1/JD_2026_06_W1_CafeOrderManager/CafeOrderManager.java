@@ -1,36 +1,5 @@
 package src.June_2026.Week_1.JD_2026_06_W1_CafeOrderManager;
-/*
 
-ReadMe
-
-Drill ID: JD_2026_June_W1_CafeOrderManager
-
-Class Name: CafeOrderManager
-
-Difficulty: Level 4 — Mini Project
-
-Estimated Time: 30–40 minutes
-
-Actual Time Taken: 32 minutes
-
-Written by: Chanwoo Park
-
-Problem
-Create a cafe order management program that stores multiple orders as objects,
-prints order information, calculates total sales, and searches for a specific drink.
-
-Requirements
-- Create an Order class with drinkName, quantity, price, and isMember fields.
-- Use a constructor to initialize each Order object.
-- Use methods to calculate original price, discounted price, and print order information.
-- Store multiple Order objects in an array.
-- Use a loop to print all orders and calculate total sales.
-- Search for a Latte order using proper String comparison.
-
-Learning Objective
-Practice Java classes, objects, constructors, arrays, loops, methods, and String comparison
-by building a small console-based order management program.
-*/
 public class CafeOrderManager {
     public void main(String[] args) {
         Order[] orders = {
