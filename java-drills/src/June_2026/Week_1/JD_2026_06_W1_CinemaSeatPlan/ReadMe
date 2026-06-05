@@ -1,0 +1,30 @@
+ReadMe
+
+Drill ID: JD_2026_06_W1_CinemaSeatPlan
+
+Class Name: CinemaSeatPlanner
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 45–60 minutes
+
+Actual Time Taken: 51 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a cinema seat reservation program using a two-dimensional array.
+The program should create seat labels, process reservation requests,
+update reserved seats, and print the final seating chart.
+
+Requirements
+- Use a two-dimensional String array to store seats.
+- Use nested for loops to fill and print the seats.
+- Use a SeatRequest object to store each reservation request.
+- Validate row and column indexes before reserving a seat.
+- Mark reserved seats as "XX".
+- Count and print the number of available seats.
+
+Learning Objective
+Practice using multidimensional arrays with nested loops while organizing
+reservation logic into multiple classes and methods.
