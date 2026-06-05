@@ -1,0 +1,31 @@
+/*
+ReadMe
+
+Drill ID: JD_2026_06_W1_EquipmentRental
+
+Class Name: EquipmentRentalApp
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 45–60 minutes
+
+Actual Time Taken: 42 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a campus equipment rental system that stores equipment objects, checks availability,
+rents equipment, returns equipment, and counts rented equipment.
+
+Requirements
+- Create Equipment objects and store them in an Equipment array.
+- Pass the array to a RentalDesk object.
+- Print available equipment.
+- Rent equipment by code.
+- Return equipment by code.
+- Count currently rented equipment.
+
+Learning Objective
+Practice object arrays, encapsulation, constructors, methods, conditions, loops,
+String comparison, and object state updates.
+*/
