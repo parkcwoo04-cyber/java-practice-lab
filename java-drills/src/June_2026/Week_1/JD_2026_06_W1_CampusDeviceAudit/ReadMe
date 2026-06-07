@@ -1,0 +1,28 @@
+ReadMe
+
+Drill ID: 2026_JD_06_W1_CampusDeviceAudit
+
+Class Name: CampusDeviceAduit
+
+Difficulty: Level 3 - Object-Oriented Problem Solving
+
+Estimated Time: 70-90 minutes
+
+Actual Time Taken: 64 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a campus device inspection system using inheritance. Different device types share common fields and methods,
+but each child class has its own inspection rules and state updates.
+
+Requirements
+- Create a parent class named CampusDevice.
+- Create Projector and LabComputer child classes using extends.
+- Override needsInspection() and inspect() in each child class.
+- Store mixed device objects in an CampusDevice[] array.
+- Use loops, conditions, and String comparison to print reports, inspect devices, and search by asset tag.
+
+Learning Objective
+Practice designing and inheritance hierarchy, separating parent and child responsibilites, overriding inherited methods,
+and processing different object types through one parent type.
