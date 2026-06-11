@@ -1,0 +1,30 @@
+ReadMe
+
+Drill ID: JD_2026_06_W1_RescueDispatchSystem
+
+Class Name: RescueDispatchSystem
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 75–90 minutes
+
+Actual Time Taken: 82 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a small emergency dispatch simulator using a parent RescueUnit class
+and several child classes. Store different child objects in one RescueUnit[]
+array and process emergency missions through polymorphism.
+
+Requirements
+- Create a RescueUnit parent class with common fields and methods.
+- Create AmbulanceUnit, FireTruckUnit, RescueBoatUnit, and DroneUnit child classes.
+- Override canDispatch() and dispatch() in each child class.
+- Store all units in one RescueUnit[] array.
+- Search for the first unit that can handle each emergency.
+- Use instanceof and downcasting for child-specific methods.
+
+Learning Objective
+Practice inheritance, method overriding, polymorphism, object arrays,
+state updates, constructors, super(), and safe access to child-specific methods.
