@@ -1,4 +1,4 @@
-package src.June_2026.Week_2.JD_2026_06_W1_RescueDsipatchSystem;
+package src.June_2026.Week_2.JD_2026_06_W2_RescueDsipatchSystem;
 
 public class FireTruckUnit extends RescueUnit{
     public FireTruckUnit(String unitName, int fuel, boolean available) {
