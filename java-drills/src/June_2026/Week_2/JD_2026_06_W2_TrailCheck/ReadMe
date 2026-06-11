@@ -1,0 +1,29 @@
+ReadMe
+
+Drill ID: JD_2026_06_W2_TrailCheck
+
+Class Name: TrailCheck
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 50 minutes
+
+Actual Time Taken: 43 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a small hiking trail inspection program that manages multiple Trail objects,
+updates their status based on safety scores, searches trails by name, and prints
+inspection summaries.
+
+Requirements
+- Create several Trail objects.
+- Store the objects in an array.
+- Use TrailLog methods to print, search, count, filter, and update trails.
+- Use conditionals, loops, arrays, constructors, instance methods, and String methods.
+- Keep each class responsible for its own role.
+
+Learning Objective
+Practice building a small object-oriented Java program with multiple classes,
+object arrays, method decomposition, condition-based state updates, and String-based search.
