@@ -1,0 +1,29 @@
+ReadMe
+
+Drill ID: JD_2026_06_W2_ShelterRescueMission
+
+Class Name: ShelterRescueMission
+
+Difficulty: Level 4 — Creative OOP Challenge
+
+Estimated Time: 90–120 minutes
+
+Actual Time Taken: 97 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a rescue coordination system for an animal shelter. Different rescue units
+must process animals differently, update animal status, and print a final mission report.
+
+Requirements
+- Use inheritance with RescueUnit, MedicalUnit, and TransportUnit.
+- Use polymorphism by storing different units in a RescueUnit[] array.
+- Use enum types for animal status and urgency level.
+- Use final for unitId.
+- Use arrays, loops, conditions, String methods, and null checks.
+- Implement realistic status transitions and final report counts.
+
+Learning Objective
+Practice designing a multi-class Java program where objects interact through inheritance,
+overriding, polymorphism, enum values, and reference-type state changes.
