@@ -1,0 +1,28 @@
+ReadMe
+
+Drill ID: JD_2026_06_W2_DisasterResponseSystem
+
+Class Name: DisasterResponseMain
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 50 minutes
+
+Actual Time Taken: 43 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a disaster response simulation system using an abstract parent class
+and several child classes that override an abstract method.
+
+Requirements
+- Create an abstract EmergencyUnit parent class.
+- Create FireUnit, MedicalUnit, and RescueUnit child classes.
+- Store emergency units in an EmergencyUnit array.
+- Use a loop to print information and call overridden respond() methods.
+- Count how many units are ready based on readiness.
+
+Learning Objective
+Practice abstraction by defining common structure in an abstract class,
+then completing different behaviors in child classes through method overriding.
