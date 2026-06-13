@@ -1,0 +1,28 @@
+ReadMe
+
+Drill ID: JD_2026_06_W2_WildLifeSanctuary
+
+Class Name: WildLifeSanctuary
+
+Difficulty: Level 3 — Object-Oriented Problem Solving with Abstract Classes
+
+Estimated Time: 60–90 minutes
+
+Actual Time Taken: 65 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a wildlife sanctuary monitoring system using an abstract Animal class and multiple child classes.
+The program should process daily care, update animal health, count critical animals, find the lowest-health animal,
+and classify animals by care type.
+
+Requirements
+- Create an abstract Animal parent class.
+- Create Bird, Mammal, and Reptile child classes.
+- Override provideCare() and getCareType() in each child class.
+- Store different child objects in one Animal[] array.
+- Use helper methods to process care, count critical animals, find the lowest-health animal, and filter by care type.
+
+Learning Objective
+Practice abstract classes, abstract methods, overriding, polymorphism, arrays, loops, conditions, and object state updates.
