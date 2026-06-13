@@ -114,7 +114,7 @@ This happened because the method design focused on producing console output rath
 
 In Java, a method that calculates or searches for a value should often return that value. This makes the method reusable in other situations. For example, if `countCriticalAnimals()` returns an `int`, the result can be printed, compared, stored, or used in another condition.
 
-This connects to the concept of [[Method Return Value]] and [[Method Responsibility]]. A method should usually have one clear role:
+This connects to the concept of `Method Return Value` and `Method Responsibility`. A method should usually have one clear role:
 
 - calculate and return a result
 - search and return an object
