@@ -1,0 +1,30 @@
+ReadMe
+
+Drill ID: JD_2026_06_W2_LostItemControlCenter
+
+Class Name: LostItemControlCenter
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 70–90 minutes
+
+Actual Time Taken: 83 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a lost item management system for a school office.
+The program should register lost items, prevent duplicate item IDs,
+search by category, process claim requests, and count claim attempts.
+
+Requirements
+- Use ArrayList<LostItem> to store all lost items.
+- Use HashSet<String> to prevent duplicate item IDs.
+- Use HashSet<String> to manage existing categories.
+- Use HashMap<String, Integer> to count claim attempts by student.
+- Process claim requests using item ID, claimed state, and description matching.
+
+Learning Objective
+Practice Java Collection Framework in an object-oriented program.
+Focus on choosing the right collection for each responsibility and connecting
+multiple classes through method calls.
