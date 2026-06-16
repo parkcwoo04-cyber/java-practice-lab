@@ -1,0 +1,31 @@
+ReadMe
+
+Drill ID: JD_2026_06_W3_LibraryBorrowingSystem
+
+Class Name: LibraryBorrowingSystem
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 70–90 minutes
+
+Actual Time Taken: 71 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a small library borrowing system that manages books, magazines, and members.
+Use inheritance for shared item information, an interface for borrowable behavior,
+ArrayList for storing objects, and exception handling for invalid actions.
+
+Requirements
+- Create LibraryItem as an abstract parent class.
+- Create Book and Magazine as child classes.
+- Make only Book implement Borrowable.
+- Store items and members in ArrayList.
+- Search by item ID and member ID.
+- Borrow and return books.
+- Use exception handling for invalid cases.
+
+Learning Objective
+Practice object-oriented design with inheritance, interface implementation,
+collection-based search, state updates, and exception handling.
