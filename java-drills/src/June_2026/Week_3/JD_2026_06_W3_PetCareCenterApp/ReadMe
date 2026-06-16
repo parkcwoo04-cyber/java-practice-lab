@@ -1,0 +1,27 @@
+ReadMe
+
+Drill ID: JD_2026_06_W3_PetCareCenterApp
+
+Class Name: PetCareCenterApp
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 50–60 minutes
+
+Actual Time Taken: 43 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a small pet care center management program using inheritance, interface, and ArrayList.
+
+Requirements
+- Create Pet as a parent class.
+- Create Dog and Cat as child classes.
+- Use CareService interface for care behavior.
+- Store pets in an ArrayList.
+- Search for pets and update their health score.
+
+Learning Objective
+Practice combining inheritance, interface implementation, polymorphism, ArrayList storage,
+object search, method overriding, and state update logic.
