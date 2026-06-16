@@ -1,4 +1,4 @@
-package src.June_2026.Week_3.JD_2026_06_W3_LibraryBorrowingApp;
+package src.June_2026.Week_3.JD_2026_06_W3_LibraryBorrowingSystem;
 
 public class Magazine extends  LibraryItem {
     private String issueMonth;
