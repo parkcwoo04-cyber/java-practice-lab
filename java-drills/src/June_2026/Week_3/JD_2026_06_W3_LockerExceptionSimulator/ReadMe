@@ -1,0 +1,32 @@
+ReadMe
+
+Drill ID: JD_2026_06_W3_LockerExceptionSimulator
+
+Class Name: LockerExceptionSimulator
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 50 minutes
+
+Actual Time Taken: 43 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a small package locker simulation that safely processes pickup requests.
+The main focus is exception handling. The program should continue running even
+when a request contains invalid input, an invalid locker number, a wrong pickup
+code, or an already-picked-up package.
+
+Requirements
+- Store PackageLocker objects in an array inside LockerSystem.
+- Process String pickup requests such as "0:1234".
+- Convert the locker number from String to int.
+- Validate locker number range and pickup code.
+- Throw InvalidLockerAccessException for wrong code or already-picked-up package.
+- Use multiple catch blocks in main.
+- Use finally to print a completion message after every request.
+
+Learning Objective
+Practice using try-catch, multiple catch blocks, throw, custom exceptions,
+finally, arrays, loops, and object state updates in a multi-class Java program.
