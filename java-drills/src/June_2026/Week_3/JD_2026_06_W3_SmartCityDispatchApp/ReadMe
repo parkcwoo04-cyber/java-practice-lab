@@ -1,0 +1,40 @@
+ReadMe
+
+Class Name: SmartCityDispatchApp
+
+Difficulty: Level 4 — Creative OOP Challenge
+
+Estimated Time: 90–150 minutes
+
+Actual Time Taken: 113 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a console-based smart city emergency dispatch system.
+The program should register response units, validate incident reports,
+dispatch suitable units, handle invalid reports, and print a final report.
+
+Program Flow
+- Create a DispatchCenter.
+- Create and register several response units.
+- Create several valid and invalid incident reports.
+- Register incidents through the DispatchCenter.
+- Dispatch available suitable units.
+- Print the final operation report.
+
+Class Responsibilities
+- SmartCityDispatchApp: Runs the program and prepares sample data.
+- DispatchCenter: Coordinates validation, storage, assignment, status updates, and reporting.
+- Incident: Stores incident data and status.
+- ResponseUnit: Defines shared unit data and behavior.
+- FireUnit / MedicalUnit / PoliceUnit: Provide unit-specific response behavior.
+- Dispatchable: Defines required dispatch-related behavior.
+- InvalidIncidentException: Represents invalid incident input.
+
+Requirements
+- Use collections for units and incidents.
+- Use enum for incident type and status.
+- Use exception handling for invalid incident reports.
+- Use inheritance, overriding, polymorphism, abstraction, and interface-based design.
+- Print a final report with assignment results and incident counts.
