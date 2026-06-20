@@ -1,0 +1,36 @@
+ReadMe
+
+Drill ID: JD_2026_06_W3_CampusMealOrder
+
+Class Name: CampusMealOrder
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 70–90 minutes
+
+Actual Time Taken: 73 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a campus cafeteria order system that handles regular menu items,
+limited-stock menu items, successful orders, rejected orders, and a final report.
+
+Program Flow
+The main method creates menu items, creates an OrderManager, registers menu items,
+processes several order attempts, and prints the final result.
+
+Class Responsibilities
+- CampusMealOrderApp: Starts the program and connects objects.
+- MenuItem: Represents common menu item data and behavior.
+- RegularMenuItem: Represents a normal item without stock limits.
+- LimitedMenuItem: Represents an item with stock that decreases after successful orders.
+- MealOrder: Represents one successful order.
+- OrderManager: Coordinates menu storage, order processing, rejected orders, and reporting.
+
+Requirements
+- Use inheritance and polymorphism.
+- Store menu items and orders in collections.
+- Reject invalid orders safely.
+- Update limited stock only after successful orders.
+- Print successful orders, rejected orders, total revenue, and remaining stock.
