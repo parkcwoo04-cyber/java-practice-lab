@@ -1,0 +1,34 @@
+ReadMe
+
+Drill ID: JD_2026_06_W3_LibraryBorrowingProgram
+
+Class Name: LibraryBorrowingApp
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 60–90 minutes
+
+Actual Time Taken: 64 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a console-based library borrowing system.
+The program manages books and members.
+Users can view books, view members, borrow books, return books,
+and check a member's borrowing status.
+
+Program Flow
+1. Create Scanner.
+2. Create Library.
+3. Add several Book and Member objects to Library.
+4. Show menu repeatedly.
+5. Receive user menu selection.
+6. Call the appropriate Library method.
+7. Continue until the user selects 0.
+
+Class Responsibilities
+LibraryBorrowingApp controls console input and program flow.
+Book stores book data and borrowing state.
+Member stores member data and borrowing count.
+Library manages books, members, search logic, borrowing, and returning.
