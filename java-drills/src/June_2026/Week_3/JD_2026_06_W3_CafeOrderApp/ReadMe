@@ -1,0 +1,33 @@
+ReadMe
+
+Drill ID: JD_2026_06_W3_CafeOrderApp
+
+Class Name: CafeOrderApp
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 45–60 minutes
+
+Actual Time Taken: 38 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a console-based cafe order program using Scanner.
+The user selects menu items by number and enters quantities.
+The program stores the order and prints a final summary.
+
+Program Flow
+1. Create a Scanner.
+2. Create several MenuItem objects.
+3. Display the menu.
+4. Repeatedly ask the user for a menu number.
+5. If the user enters 0, finish the order.
+6. Otherwise, ask for quantity.
+7. Add the selected menu item to the Order.
+8. Print the final order summary.
+
+Class Responsibilities
+CafeOrderApp controls input and program flow.
+MenuItem stores menu data.
+Order stores and calculates order data.
