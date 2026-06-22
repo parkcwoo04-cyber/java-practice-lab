@@ -102,14 +102,13 @@ public class HabitStatistics {
         System.out.println("Productivity Habits: " + productivityHabitCount);
         System.out.println("Personal Habits: " + personalHabitCount);
         System.out.println("General Habits: " + generalHabitCount);
-        System.out.println();
     }
 
     public Habit findBestStreakHabit() {
         Habit bestStreakHabit = habits.get(0);
 
         for (Habit habit : habits) {
-            if (bestStreakHabit.getBestStreak() > habit.getBestStreak()) {
+            if (habit.getBestStreak() > bestStreakHabit.getBestStreak()) {
                 bestStreakHabit = habit;
             }
         }
@@ -121,7 +120,7 @@ public class HabitStatistics {
         Habit lowestCompletionHabit = habits.get(0);
 
         for (Habit habit : habits) {
-            if (lowestCompletionHabit.calculateCompletionRate() < habit.calculateCompletionRate()) {
+            if (lowestCompletionHabit.calculateCompletionRate() > habit.calculateCompletionRate()) {
                 lowestCompletionHabit = habit;
             }
         }
@@ -133,7 +132,7 @@ public class HabitStatistics {
         Habit highestCompletionHabit = habits.get(0);
 
         for (Habit habit : habits) {
-            if (highestCompletionHabit.calculateCompletionRate() > habit.calculateCompletionRate()) {
+            if (highestCompletionHabit.calculateCompletionRate() < habit.calculateCompletionRate()) {
                 highestCompletionHabit = habit;
             }
         }
@@ -160,8 +159,8 @@ public class HabitStatistics {
             System.out.println("Best Streak Habit: " + bestStreakHabit.getHabitTitle() + " | Best Streaks: " + bestStreakHabit.getBestStreak());
         }
 
-        System.out.printf("High Performing Habit:\n %s | Rate: %.1f%%\n", findHighestCompletionRateHabit().getHabitTitle(), findHighestCompletionRateHabit().calculateCompletionRate());
-        System.out.printf("Low Performing Habit:\n %s | Rate: %.1f%%\n", findLowestCompletionRateHabit().getHabitTitle(), findLowestCompletionRateHabit().calculateCompletionRate());
+        System.out.printf("High Performing Habit:\n%s | Rate: %.1f%%\n", findHighestCompletionRateHabit().getHabitTitle(), findHighestCompletionRateHabit().calculateCompletionRate());
+        System.out.printf("Low Performing Habit:\n%s | Rate: %.1f%%\n", findLowestCompletionRateHabit().getHabitTitle(), findLowestCompletionRateHabit().calculateCompletionRate());
         System.out.println();
         countByCategory();
         System.out.println("===================================");

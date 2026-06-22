@@ -34,20 +34,19 @@ public abstract class Habit implements Trackable {
 
     @Override
     public void markComplete() {
-        this.completedCount++;
-
         if (this.lastCompletedDate == null) {
             this.currentStreak = 1;
-        } else if (this.lastCompletedDate.isEqual(this.createdDate)) {
+        } else if (this.lastCompletedDate.isEqual(LocalDate.now())) {
             System.out.println("This habit was already completed today");
             return;
-        } else if (this.lastCompletedDate.isEqual(this.createdDate.minusDays(1))) {
+        } else if (this.lastCompletedDate.isEqual(LocalDate.now().minusDays(1))) {
             currentStreak++;
         } else {
             currentStreak = 1;
         }
 
         lastCompletedDate = LocalDate.now();
+        this.completedCount++;
 
         if (currentStreak > bestStreak) {
             this.bestStreak = currentStreak;
@@ -114,5 +113,21 @@ public abstract class Habit implements Trackable {
 
     public int getBestStreak() {
         return bestStreak;
+    }
+
+    public void setHabitTitle(String habitTitle) {
+        this.title = habitTitle;
+    }
+
+    public void setHabitCategory(HabitCategory habitCategory) {
+        this.category = habitCategory;
+    }
+
+    public void setTargetCount(int targetCount) {
+        this.targetCount = targetCount;
+    }
+
+    public void setStatus(HabitStatus status) {
+        this.status = status;
     }
 }

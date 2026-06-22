@@ -53,6 +53,57 @@ public class HabitTracker {
         return results;
     }
 
+    public ArrayList<Habit> findHabitsByCategory(HabitCategory category) {
+        ArrayList<Habit> results = new ArrayList<>();
+
+        for (Habit habit : habits) {
+            if (habit.getCategory().equals(category)) {
+                results.add(habit);
+            }
+        }
+
+        return results;
+    }
+
+    public void searchHabitsByCategory(HabitCategory category) {
+        ArrayList<Habit> results = findHabitsByCategory(category);
+        if (results.isEmpty()) {
+            System.out.println("No habits found");
+            return;
+        }
+
+        System.out.println("Search Result for " + category);
+        for (int i = 0; i < results.size(); i++) {
+            System.out.println((i+1) + ". " + results.get(i).getProgressSummary());
+        }
+        System.out.println();
+    }
+
+    public ArrayList<Habit> findHabitsByStatus(HabitStatus status) {
+        ArrayList<Habit> results = new ArrayList<>();
+        for (Habit habit : habits) {
+            if (habit.getStatus().equals(status)) {
+                results.add(habit);
+            }
+        }
+
+        return results;
+    }
+
+    public void searchHabitByStatus(HabitStatus status) {
+        ArrayList<Habit> results = findHabitsByStatus(status);
+        if (results.isEmpty()) {
+            System.out.println("No habits found");
+            return;
+        }
+
+        System.out.println("Search Result for " + status);
+
+        for (int i = 0; i < results.size(); i++) {
+            System.out.println((i+1) + ". " + results.get(i).getProgressSummary());
+        }
+    }
+
     public Habit findHabitByID(String habitID) {
         for (Habit habit : habits) {
             if (habit.getHabitID().equals(habitID)) {
@@ -71,7 +122,7 @@ public class HabitTracker {
         }
 
         System.out.println("Search result for " + title);
-        for (int i = 0; i <= habits.size(); i++) {
+        for (int i = 0; i < habits.size(); i++) {
             System.out.println((i+1) + ". " + habits.get(i).getProgressSummary());
         }
     }
