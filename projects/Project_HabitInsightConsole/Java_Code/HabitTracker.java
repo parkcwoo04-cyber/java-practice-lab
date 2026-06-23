@@ -39,6 +39,7 @@ public class HabitTracker {
 
         habits.remove(targetHabit);
         System.out.println("Habit removed: " + habit.getHabitTitle());
+        System.out.println();
     }
 
     public ArrayList<Habit> findHabitsByTitle(String title) {

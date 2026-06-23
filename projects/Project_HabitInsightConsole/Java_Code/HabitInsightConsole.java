@@ -13,178 +13,50 @@ public class HabitInsightConsole {
         tracker.addHabit(new ExerciseHabit("Running", HabitCategory.EXERCISE, 10, "Cardio"));
 
         Scanner scanner = new Scanner(System.in);
-        HabitCategory category = HabitCategory.STUDY;
         boolean run = true;
         while (run) {
-            System.out.println("=== Menu ===");
-            System.out.println("Enter the number only");
-            System.out.println("1. Habit Management");
-            System.out.println("2. Search Habit");
-            System.out.println("3. Reports & Insights");
-            System.out.println("4. Progress Tracking");
-            System.out.println("0. Exit Program");
-            int choice = scanner.nextInt();
+
+            int choice = mainMenuChoice();
 
             switch (choice) {
                 case 1: // Habit Management
-                    System.out.println("1. Add Habit"); // adding new habit
-                    System.out.println("2. Remove Habit"); // removing habit
-                    System.out.println("3. Manage Habit"); // managing habit(editing information, change status)
-                    System.out.println("4. Print All Habits");
-                    System.out.println("0. Return");
 
+                    int managementChoice = managementMenuChoice(); // 1. Add Habit 2. Remove Habit 3. Manage Habit 4. Print all Habits 0. Return
                     boolean habitManagement = true;
+
                     while (habitManagement) {
-                        int choice_1 = scanner.nextInt();
-                        switch (choice_1) {
+                        switch (managementChoice) {
                             case 1: // add Habit
-                                selectHabitType();
-                                int choice_habitType = scanner.nextInt();
-                                System.out.println("Enter Habit Title");
-                                scanner.nextLine();
-                                String title = scanner.nextLine();
-                                selectHabitCategory();
-                                int choice_habitCategory = scanner.nextInt();
-                                switch (choice_habitCategory) {
-                                    case 1: // Selected Study
-                                        category = HabitCategory.STUDY;
-                                        System.out.println("Study Selected");
-                                        break;
 
-                                    case 2: // Selected Exercise
-                                        category = HabitCategory.EXERCISE;
-                                        System.out.println("Exercise Selected");
-                                        break;
-
-                                    case 3: // Selected Health
-                                        category = HabitCategory.HEALTH;
-                                        System.out.println("Health Selected");
-                                        break;
-
-                                    case 4: // Selected Productivity
-                                        category = HabitCategory.PRODUCTIVITY;
-                                        System.out.println("Productivity Selected");
-                                        break;
-
-                                    case 5: // Selected Personal
-                                        category = HabitCategory.PERSONAL;
-                                        System.out.println("Personal Selected");
-                                        break;
-
-                                    case 6: // Selected General
-                                        category = HabitCategory.GENERAL;
-                                        System.out.println("General Selected");
-                                        break;
-
-                                    default:
-                                        System.out.println("Invalid choice");
-                                        break;
-                                }
-                                System.out.println("Enter Target Count");
-                                int targetCount = scanner.nextInt();
-
-                                switch (choice_habitType) {
-                                    case 1: // Study Habit
-                                        System.out.println("Enter Subject");
-                                        scanner.nextLine();
-                                        String subject = scanner.nextLine();
-                                        tracker.addHabit(new StudyHabit(title, category, targetCount, subject));
-                                        habitManagement = false;
-                                        break;
-
-                                    case 2: // Exercise Habit
-                                        System.out.println("Enter Exercise Type");
-                                        scanner.nextLine();
-                                        String exerciseType = scanner.nextLine();
-                                        tracker.addHabit(new ExerciseHabit(title, category, targetCount, exerciseType));
-                                        habitManagement = false;
-                                        break;
-
-                                    case 3: // General Habit
-                                        System.out.println("Enter Note");
-                                        scanner.nextLine();
-                                        String note = scanner.nextLine();
-                                        tracker.addHabit(new GeneralHabit(title, category, targetCount, note));
-                                        habitManagement = false;
-                                        break;
-
-                                    default:
-                                        System.out.println("Invalid choice");
-                                        break;
-                                }
-
+                                handleAddHabit(scanner, tracker);
+                                habitManagement = false;
                                 break;
 
                             case 2: // remove habit
-                                System.out.println("Enter Habit Title Keyword to Remove.");
-                                scanner.nextLine();
-                                String habitTitleKeyword = scanner.nextLine();
 
-                                ArrayList<Habit> results = tracker.findHabitsByTitle(habitTitleKeyword);
+                                Habit removeHabit = searchHabitByTitle(scanner, tracker);
 
-                                if (results.isEmpty()) {
-                                    System.out.println("No Habit Found for: " + habitTitleKeyword);
+                                if (removeHabit == null) {
                                     habitManagement = false;
+                                    System.out.println();
                                     break;
                                 }
 
-                                System.out.println("=== Search Result ===");
-                                for (int i = 0; i < results.size(); i++) {
-                                    Habit habit = results.get(i);
-
-                                    System.out.println((i+1) + ". " + habit.getProgressSummary());
-                                }
-                                System.out.println();
-                                System.out.println("Select Habit Number to Remove");
-                                int removeHabitNumber = scanner.nextInt();
-
-                                if (removeHabitNumber < 1 || removeHabitNumber > results.size()) {
-                                    System.out.println("Invalid Input");
-                                    habitManagement = false;
-                                    break;
-                                }
-
-                                Habit removeHabit = results.get(removeHabitNumber - 1);
                                 tracker.removeHabit(removeHabit);
                                 habitManagement = false;
                                 break;
 
                             case 3: // manage habit
-                                System.out.println("Enter Habit Title to Modify");
-                                scanner.nextLine();
-                                String habitManageTitle = scanner.nextLine();
 
-                                ArrayList<Habit> searchResults = tracker.findHabitsByTitle(habitManageTitle);
+                                Habit modifyHabit = searchHabitByTitle(scanner, tracker);
 
-                                if (searchResults.isEmpty()) {
-                                    System.out.println("No Habit Found for: " + habitManageTitle);
+                                if (modifyHabit == null) {
+                                    System.out.println();
                                     habitManagement = false;
                                     break;
                                 }
 
-                                System.out.println("=== Search Result ===");
-                                for (int i = 0; i < searchResults.size(); i++) {
-                                    System.out.println((i+1) + ". " + searchResults.get(i).getProgressSummary());
-                                }
-                                System.out.println();
-
-                                System.out.println("Select Habit Number to Modify");
-                                int modifyHabitNumber = scanner.nextInt();
-
-                                if (modifyHabitNumber < 1 || modifyHabitNumber > searchResults.size()) {
-                                    System.out.println("Invalid Input");
-                                    habitManagement = false;
-                                    break;
-                                }
-
-                                Habit modifyHabit = searchResults.get(modifyHabitNumber - 1);
-
-                                System.out.println("=== Modify Habit ===");
-                                System.out.println("1. Edit Title");
-                                System.out.println("2. Edit Category");
-                                System.out.println("3. Edit Target Count");
-                                System.out.println("4. Edit Habit Status");
-                                int editHabitStatus = scanner.nextInt();
+                                int editHabitStatus = habitModifyMenuChoice();
 
                                 switch (editHabitStatus) {
                                     case 1: // edit title
@@ -197,27 +69,11 @@ public class HabitInsightConsole {
                                         break;
 
                                     case 2: // edit category
-                                        selectHabitCategory();
-                                        int newCategory = scanner.nextInt();
 
-                                        if (newCategory < 1 || newCategory > 6) {
-                                            System.out.println("Invalid Input");
-                                            habitManagement = false;
-                                            break;
-                                        } else if (newCategory ==  1) {
-                                            modifyHabit.setHabitCategory(HabitCategory.STUDY);
-                                        } else if (newCategory ==  2) {
-                                            modifyHabit.setHabitCategory(HabitCategory.EXERCISE);
-                                        } else if (newCategory ==  3) {
-                                            modifyHabit.setHabitCategory(HabitCategory.HEALTH);
-                                        } else if (newCategory ==  4) {
-                                            modifyHabit.setHabitCategory(HabitCategory.PRODUCTIVITY);
-                                        } else if (newCategory ==  5) {
-                                            modifyHabit.setHabitCategory(HabitCategory.PERSONAL);
-                                        } else if (newCategory ==  6) {
-                                            modifyHabit.setHabitCategory(HabitCategory.GENERAL);
-                                        }
-                                        System.out.println("Habit Category Edited to " + newCategory);
+                                        HabitCategory modifiedCategory = categoryChoice();
+                                        modifyHabit.setHabitCategory(modifiedCategory);
+
+                                        System.out.println("Habit Category Edited to " + modifiedCategory);
                                         habitManagement = false;
                                         break;
 
@@ -231,11 +87,8 @@ public class HabitInsightConsole {
                                         break;
 
                                     case 4: // Edit Status
-                                        System.out.println("Select Habit Status");
-                                        System.out.println("1. Active");
-                                        System.out.println("2. Paused");
-                                        System.out.println("3. Archived");
-                                        int habitStatus = scanner.nextInt();
+
+                                        int habitStatus = habitStatusChoice();
 
                                         if (habitStatus < 1 || habitStatus > 4) {
                                             System.out.println("Invalid Input");
@@ -278,79 +131,39 @@ public class HabitInsightConsole {
                     }
                     break;
                 case 2: // Search Habit (Title, Category, Status)
-                    System.out.println("=== Search Menu ===");
-                    System.out.println("1. Search By Title");
-                    System.out.println("2. Search By Category");
-                    System.out.println("3. Search By Status");
-                    System.out.println("0. Return");
-                    int choice_Search = scanner.nextInt();
+
+                    int choice_Search = searchMenuChoice();
 
                     boolean searchHabit = true;
                     while (searchHabit) {
                         switch (choice_Search) {
                             case 1: // search Habit By Title
-                                System.out.println("Enter Habit Title");
-                                scanner.nextLine();
-                                String habitTitle = scanner.nextLine();
+                                System.out.println("Enter Title");
+                                String title = scanner.nextLine();
 
-                                ArrayList<Habit> searchResults = tracker.findHabitsByTitle(habitTitle);
-                                if (searchResults.isEmpty()) {
-                                    System.out.println("No Habit Found for: " + habitTitle);
-                                    searchHabit = false;
-                                    break;
-                                }
-
-                                System.out.println("Search Result for " + habitTitle);
-                                for (int i = 0; i < searchResults.size(); i++) {
-                                    System.out.println((i+1) + ". " + searchResults.get(i).getProgressSummary());
-                                }
-                                System.out.println();
+                                tracker.searchHabitByTitle(title);
                                 searchHabit = false;
                                 break;
 
                             case 2: // Search Habit by Category
-                                selectHabitCategory();
-                                int searchCategory = scanner.nextInt();
 
-                                if (searchCategory < 1 || searchCategory > 6) {
-                                    System.out.println("Invalid Input");
-                                    searchHabit = false;
-                                    break;
-                                } else if (searchCategory ==  1) {
-                                    tracker.searchHabitsByCategory(HabitCategory.STUDY);
-                                } else if (searchCategory ==  2) {
-                                    tracker.searchHabitsByCategory(HabitCategory.EXERCISE);
-                                } else if (searchCategory ==  3) {
-                                    tracker.searchHabitsByCategory(HabitCategory.HEALTH);
-                                } else if (searchCategory ==  4) {
-                                    tracker.searchHabitsByCategory(HabitCategory.PRODUCTIVITY);
-                                } else if (searchCategory ==  5) {
-                                    tracker.searchHabitsByCategory(HabitCategory.PERSONAL);
-                                } else if (searchCategory ==  6) {
-                                    tracker.searchHabitsByCategory(HabitCategory.GENERAL);
-                                }
+                                HabitCategory targetCategory = categoryChoice();
+                                tracker.searchHabitsByCategory(targetCategory);
                                 System.out.println();
                                 searchHabit = false;
                                 break;
 
                             case 3: // Search Habit by Status
-                                System.out.println("Select Habit Status");
-                                System.out.println("1. Active");
-                                System.out.println("2. Paused");
-                                System.out.println("3. Archived");
-                                int habitStatus = scanner.nextInt();
 
-                                if (habitStatus < 1 || habitStatus > 3) {
-                                    System.out.println("Invalid Input");
+                                HabitStatus habitStatus = searchHabitStatus(scanner, tracker);
+
+                                if (habitStatus == null) {
                                     searchHabit = false;
                                     break;
-                                } else if (habitStatus == 1) {
-                                    tracker.searchHabitByStatus(HabitStatus.ACTIVE);
-                                } else if (habitStatus == 2) {
-                                    tracker.searchHabitByStatus(HabitStatus.PAUSED);
-                                } else if (habitStatus == 3) {
-                                    tracker.searchHabitByStatus(HabitStatus.ARCHIVED);
                                 }
+
+                                tracker.searchHabitByStatus(habitStatus);
+
                                 System.out.println();
                                 searchHabit = false;
                                 break;
@@ -373,18 +186,16 @@ public class HabitInsightConsole {
                     break;
 
                 case 4: // Progress Tracking
-                    System.out.println("Enter Habit Title");
-                    scanner.nextLine();
-                    String habitTitle = scanner.nextLine();
+                    Habit markHabit = searchHabitByTitle(scanner, tracker);
 
-                    ArrayList<Habit> searchResults = tracker.findHabitsByTitle(habitTitle);
+                    if (markHabit == null) {
+                        System.out.println();
+                        searchHabit = false;
+                        break;
+                    }
 
-                    tracker.searchHabitByTitle(habitTitle);
-                    System.out.println("Select Habit");
-                    int title = scanner.nextInt();
-
-                    tracker.completeHabit(searchResults.get(title - 1));
-                    System.out.println(habitTitle + " has been marked completed.");
+                    tracker.completeHabit(markHabit);
+                    System.out.println(markHabit.getHabitTitle() + " has been marked completed.");
                     break;
 
                 case 0:
@@ -399,17 +210,57 @@ public class HabitInsightConsole {
         }
     }
 
+    private static int mainMenuChoice() {
+        System.out.println("=== Menu ===");
+        System.out.println("Enter the number only");
+        System.out.println("1. Habit Management");
+        System.out.println("2. Search Habit");
+        System.out.println("3. Reports & Insights");
+        System.out.println("4. Progress Tracking");
+        System.out.println("0. Exit Program");
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
+        return choice;
+    }
 
+    private static int managementMenuChoice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("=== Habit Management Menu ===");
+        System.out.println("1. Add Habit"); // adding new habit
+        System.out.println("2. Remove Habit"); // removing habit
+        System.out.println("3. Manage Habit"); // managing habit(editing information, change status)
+        System.out.println("4. Print All Habits"); // Print all habits
+        System.out.println("0. Return");
+        int choice = scanner.nextInt();
 
+        return choice;
+    }
 
-    private static void selectHabitType() {
+    private static int searchMenuChoice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("=== Search Menu ===");
+        System.out.println("1. Search By Title");
+        System.out.println("2. Search By Category");
+        System.out.println("3. Search By Status");
+        System.out.println("0. Return");
+        int choice = scanner.nextInt();
+
+        return choice;
+    }
+
+    private static int habitTypeChoice() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Select Habit Type");
         System.out.println("1. Study Habit");
         System.out.println("2. Exercise Habit");
         System.out.println("3. General Habit");
+        int choice = scanner.nextInt();
+
+        return choice;
     }
 
-    private static void selectHabitCategory() {
+    private static int habitCategoryChoice() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Select Habit Category");
         System.out.println("1. Study");
         System.out.println("2. Exercise");
@@ -417,5 +268,168 @@ public class HabitInsightConsole {
         System.out.println("4. Productivity");
         System.out.println("5. Personal");
         System.out.println("6. General");
+        int choice = scanner.nextInt();
+
+        return choice;
+    }
+
+    private static int habitModifyMenuChoice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("=== Modify Habit ===");
+        System.out.println("1. Edit Title");
+        System.out.println("2. Edit Category");
+        System.out.println("3. Edit Target Count");
+        System.out.println("4. Edit Habit Status");
+        int choice = scanner.nextInt();
+
+        return choice;
+    }
+
+    private static int habitStatusChoice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Select Habit Status");
+        System.out.println("1. Active");
+        System.out.println("2. Paused");
+        System.out.println("3. Archived");
+        int choice = scanner.nextInt();
+
+        return choice;
+    }
+
+    private static HabitCategory categoryChoice() {
+        int choice = habitCategoryChoice();
+        HabitCategory category = null;
+
+        switch (choice) {
+            case 1:
+                System.out.println("Study Selected");
+                System.out.println();
+                category = HabitCategory.STUDY;
+                break;
+
+            case 2:
+                System.out.println("Exercise Selected");
+                System.out.println();
+                category = HabitCategory.EXERCISE;
+                break;
+
+            case 3:
+                System.out.println("Health Selected");
+                System.out.println();
+                category = HabitCategory.HEALTH;
+                break;
+
+            case 4:
+                System.out.println("Productivity Selected");
+                System.out.println();
+                category = HabitCategory.PRODUCTIVITY;
+                break;
+
+            case 5:
+                System.out.println("Personal Selected");
+                System.out.println();
+                category = HabitCategory.PERSONAL;
+                break;
+
+            case 6:
+                System.out.println("General");
+                System.out.println();
+                category = HabitCategory.GENERAL;
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+                break;
+        }
+
+        return category;
+    }
+
+    private static void handleAddHabit(Scanner scanner, HabitTracker tracker) {
+        int choice_habitType = habitTypeChoice();
+        scanner.nextLine();
+
+        System.out.println("Enter Habit Title");
+        String title = scanner.nextLine();
+
+        HabitCategory habitCategory = categoryChoice();
+
+        System.out.println("Enter Target Count");
+        int targetCount = scanner.nextInt();
+
+        switch (choice_habitType) {
+            case 1: // Study Habit
+                System.out.println("Enter Subject");
+                scanner.nextLine();
+                String subject = scanner.nextLine();
+                tracker.addHabit(new StudyHabit(title, habitCategory, targetCount, subject));
+                break;
+
+            case 2: // Exercise Habit
+                System.out.println("Enter Exercise Type");
+                scanner.nextLine();
+                String exerciseType = scanner.nextLine();
+                tracker.addHabit(new ExerciseHabit(title, habitCategory, targetCount, exerciseType));
+                break;
+
+            case 3: // General Habit
+                System.out.println("Enter Note");
+                scanner.nextLine();
+                String note = scanner.nextLine();
+                tracker.addHabit(new GeneralHabit(title, habitCategory, targetCount, note));
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+                break;
+        }
+    }
+
+    private static Habit searchHabitByTitle(Scanner scanner, HabitTracker tracker) {
+        System.out.println("Enter Habit Title Keyword.");
+        String habitTitleKeyword = scanner.nextLine();
+
+        ArrayList<Habit> results = tracker.findHabitsByTitle(habitTitleKeyword);
+
+        if (results.isEmpty()) {
+            System.out.println("No Habit Found for: " + habitTitleKeyword);
+            return null;
+        }
+
+        System.out.println("=== Search Result ===");
+        for (int i = 0; i < results.size(); i++) {
+            Habit habit = results.get(i);
+
+            System.out.println((i + 1) + ". " + habit.getProgressSummary());
+        }
+        System.out.println();
+        System.out.println("Select Habit Number");
+        int removeHabitNumber = scanner.nextInt();
+
+        if (removeHabitNumber < 1 || removeHabitNumber > results.size()) {
+            System.out.println("Invalid Input");
+            return null;
+        }
+
+        Habit habit = results.get(removeHabitNumber - 1);
+        return habit;
+    }
+
+    private static HabitStatus searchHabitStatus(Scanner scanner, HabitTracker tracker) {
+        HabitStatus status = null;
+        int habitStatus = habitStatusChoice();
+
+        if (habitStatus < 1 || habitStatus > 3) {
+            System.out.println("Invalid Input");
+            return null;
+        } else if (habitStatus == 1) {
+            status = HabitStatus.ACTIVE;
+        } else if (habitStatus == 2) {
+            status = HabitStatus.PAUSED;
+        } else if (habitStatus == 3) {
+            status = HabitStatus.ARCHIVED;
+        }
+
+        return status;
     }
 }
