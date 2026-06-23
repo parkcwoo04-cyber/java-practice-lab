@@ -14,10 +14,6 @@ public class HabitInsightConsole {
         HabitTracker tracker = new HabitTracker(habits);
         HabitStatistics stats = new HabitStatistics(habits);
 
-        tracker.addHabit(new StudyHabit("Java", HabitCategory.STUDY, 10, "CS"));
-        tracker.addHabit(new StudyHabit("Python", HabitCategory.STUDY, 10, "CS"));
-        tracker.addHabit(new ExerciseHabit("Running", HabitCategory.EXERCISE, 10, "Cardio"));
-
         Scanner scanner = new Scanner(System.in);
         boolean run = true;
         while (run) {
@@ -355,7 +351,6 @@ public class HabitInsightConsole {
 
     private static void handleAddHabit(Scanner scanner, HabitTracker tracker) {
         int choice_habitType = habitTypeChoice();
-        scanner.nextLine();
 
         System.out.println("Enter Habit Title");
         String title = scanner.nextLine();

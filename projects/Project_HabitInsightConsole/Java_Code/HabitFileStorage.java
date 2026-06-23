@@ -53,7 +53,7 @@ public class HabitFileStorage {
         if (habit instanceof StudyHabit) {
             StudyHabit studyHabit = (StudyHabit) habit;
 
-            return "Study, "
+            return "STUDY,"
                     + studyHabit.getHabitTitle() +","
                     + studyHabit.getHabitCategory() + ","
                     + studyHabit.getTargetCount() + ","
