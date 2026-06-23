@@ -34,4 +34,8 @@ public class StudyHabit extends Habit {
                 + " | Total Study Minutes: " + totalStudyMinutes
                 + " | Avg Minutes: " + String.format("%.1f", getAverageStudyMinutes());
     }
+
+    public String getSubject() {
+        return subject;
+    }
 }

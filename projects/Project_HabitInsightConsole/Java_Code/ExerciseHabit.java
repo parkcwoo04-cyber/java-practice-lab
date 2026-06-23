@@ -33,4 +33,8 @@ public class ExerciseHabit extends Habit {
                 + " | Total Exercise Minutes: " + totalExerciseMinutes
                 + " | Avg Minutes: " + String.format("%.1f", getAverageWorkoutMinutes());
     }
+
+    public String getExerciseType() {
+        return exerciseType;
+    }
 }

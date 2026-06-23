@@ -2,8 +2,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HabitInsightConsole {
+    private static final String HABIT_FILE_PATH =
+            "/Users/parkcwoo04/Desktop/GitHub/java-practice-lab/projects/Project_HabitInsightConsole/Java_Code/Habit.csv";
+
     public static void main(String[] args) {
-        ArrayList<Habit> habits = new ArrayList<Habit>();
+
+        HabitFileStorage storage = new HabitFileStorage(HABIT_FILE_PATH);
+
+        ArrayList<Habit> habits = storage.loadHabits();
 
         HabitTracker tracker = new HabitTracker(habits);
         HabitStatistics stats = new HabitStatistics(habits);
@@ -200,6 +206,8 @@ public class HabitInsightConsole {
 
                 case 0:
                     System.out.println("Terminating Program...");
+                    System.out.println("Saving Data...");
+                    storage.saveHabits(habits);
                     run = false;
                     break;
 

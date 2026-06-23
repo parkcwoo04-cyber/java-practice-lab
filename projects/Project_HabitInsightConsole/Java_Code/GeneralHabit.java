@@ -20,4 +20,8 @@ public class GeneralHabit extends Habit {
         return super.getProgressSummary()
                 + " | Memo: " + memo;
     }
+
+    public String getMemo() {
+        return memo;
+    }
 }

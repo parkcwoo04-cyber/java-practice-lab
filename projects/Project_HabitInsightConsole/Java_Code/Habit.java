@@ -130,4 +130,8 @@ public abstract class Habit implements Trackable {
     public void setStatus(HabitStatus status) {
         this.status = status;
     }
+
+    public HabitCategory getHabitCategory() {
+        return category;
+    }
 }
