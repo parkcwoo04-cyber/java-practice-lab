@@ -1,0 +1,42 @@
+ReadMe
+
+Drill ID: JD_2026_06_W4_CampusMaintenanceRequestApp
+
+Class Name: CampusMaintenanceRequestApp
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 70–90 minutes
+
+Actual Time Taken: 76 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a campus maintenance request system that validates requests, assigns valid requests
+to available maintenance teams, and prints assignment reports.
+
+Program Flow
+The main method creates a MaintenanceCenter, registers several MaintenanceTeam objects,
+reports several MaintenanceRequest objects, assigns requests, and prints the result.
+
+Class Responsibilities
+CampusMaintenanceRequestApp starts the program.
+MaintenanceCenter coordinates registration, validation, assignment, and reports.
+MaintenanceRequest stores request data.
+MaintenanceTeam defines common team state and behavior.
+Concrete team classes decide which request type they can handle.
+
+Object Collaboration
+Main creates teams and requests.
+Main passes them to MaintenanceCenter.
+MaintenanceCenter asks each team whether it can handle each request.
+Concrete teams answer through overridden canHandle() methods.
+MaintenanceCenter stores assignment results.
+
+Requirements
+Use polymorphism for assignment logic.
+Do not use instanceof for team capability checks.
+Validate requests before storing them.
+Use ArrayList and HashMap.
+Handle invalid requests without stopping the program.
