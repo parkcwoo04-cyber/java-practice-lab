@@ -1,0 +1,35 @@
+ReadMe
+
+Drill ID: JD_2026_06_W4_StudentCourseRegistrationApp
+
+Class Name: StudentCourseRegistrationApp
+
+Difficulty: Level 3.5 — File-Based Object-Oriented Application
+
+Estimated Time: 75–100 minutes
+
+Actual Time Taken: 88 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a console-based course registration system that processes student course requests,
+handles approval, waitlist, rejection, and saves/loads registration records using files.
+
+Program Flow
+The main method creates students, courses, registration requests, a RegistrationCenter,
+and a RegistrationFileManager. The center processes the requests, prints a summary,
+and the file manager saves and reads the results.
+
+Class Responsibilities
+StudentCourseRegistrationApp: runs the sample scenario.
+Student: stores student identity.
+Course: manages capacity and enrolled students.
+RegistrationRequest: stores one request and its status.
+RegistrationCenter: coordinates validation and registration processing.
+RegistrationFileManager: handles file output and input.
+InvalidRegistrationException: represents invalid registration data.
+
+Object Collaboration
+The center receives requests, asks Course objects about capacity and duplicate enrollment,
+updates each RegistrationRequest status, and passes processed records to the file manager.
