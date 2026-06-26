@@ -1,0 +1,34 @@
+ReadMe
+
+Drill ID: JD_2026_06_W4_EquipmentRentalCenterApp
+
+Class Name: EquipmentRentalCenterApp
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 70–90 minutes
+
+Actual Time Taken: 76 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a campus equipment rental system. The system registers equipment, receives rental
+requests, assigns available equipment using polymorphism, tracks rental status, and handles
+invalid requests.
+
+Program Flow
+The main method creates a RentalCenter, registers equipment, submits requests, assigns
+equipment, prints reports, simulates returns, and prints updated reports.
+
+Class Responsibilities
+EquipmentRentalCenterApp runs the sample scenario.
+RentalCenter coordinates equipment, requests, assignments, validation, and reports.
+Equipment stores common equipment state and behavior.
+Each child equipment class decides which request type it supports.
+RentalRequest stores request data and assigned state.
+
+Object Collaboration
+RentalCenter asks each Equipment object whether it can support a RentalRequest.
+Equipment changes its own status when rented or returned.
+RentalRequest marks itself assigned when equipment is successfully rented.
