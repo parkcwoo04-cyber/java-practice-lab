@@ -239,4 +239,4 @@ These tests help catch logic errors that do not appear when only the normal case
 - [[8. Class part 1#Access Modifier|Encapsulation]]
 - [[6. Array#Array list|Array]]
 - [[4. Conditional statement#if Statement|if Statement]]
-- [[11. Collection Famework#HashMap|LinkedHashMap]]
+- [[11. Collection Framework#HashMap|LinkedHashMap]]

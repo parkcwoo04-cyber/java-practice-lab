@@ -224,5 +224,5 @@ Next time, I should separate class responsibility before writing methods. The pa
 - [[9. Class part 2#Method Overriding|Method Overriding]]
 - [[9. Class part 2#Polymorphism|Polymorphism]]
 - [[9. Class part 2#Reference Type|Reference Type]]
-- [[11. Collection Famework#ArrayList|ArrayList]]
+- [[11. Collection Framework#ArrayList|ArrayList]]
 

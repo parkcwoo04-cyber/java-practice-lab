@@ -255,9 +255,9 @@ For this problem:
 
 ## Related Java Concepts
 
-- [[11. Collection Famework#List Interface|List Interface]]
-- [[11. Collection Famework#HashSet|Hash Set]]
-- [[11. Collection Famework#HashMap|HashMap]]
+- [[11. Collection Framework#List Interface|List Interface]]
+- [[11. Collection Framework#HashSet|Hash Set]]
+- [[11. Collection Framework#HashMap|HashMap]]
 - [[8. Class part 1#Instance Variable|Instance Variable]]
 - [[8. Class part 1#Constructor|Constructor]]
 - [[7. Method#Method|Method]]

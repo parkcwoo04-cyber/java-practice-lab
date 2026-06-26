@@ -194,6 +194,6 @@ For future debugging, I should test repeated orders against the same limited ite
 - [[9. Class part 2#Method Overriding|Method Overriding]]
 - [[9. Class part 2#Polymorphism|Polymorphism]]
 - [[9. Class part 2#Reference Type|Reference Type]]
-- [[11. Collection Famework#ArrayList|ArrayList]]
+- [[11. Collection Framework#ArrayList|ArrayList]]
 - [[12. Exception Handling|Exception Handling]]
 

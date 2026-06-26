@@ -236,6 +236,6 @@ Next time, I should check these design questions before implementation:
 - [[10. Abstraction and Interface#Abstraction|Abstract Class]]
 - [[10. Abstraction and Interface#Interface|Interface]]
 - [[9. Class part 2#Enum|Enum]]
-- [[11. Collection Famework|Collection Framework]]
+- [[11. Collection Framework|Collection Framework]]
 - [[12. Exception Handling|Exception Handling]]
 

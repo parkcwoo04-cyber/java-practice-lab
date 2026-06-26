@@ -357,7 +357,7 @@ Next time, I should test these cases:
 ## Related Java Concepts
 
 - [[13. Input, Output and Files#Scanner|Scanner]]
-- [[11. Collection Famework#ArrayList|ArrayList]]
+- [[11. Collection Framework#ArrayList|ArrayList]]
 - [[8. Class part 1#Access Modifier|Encapsulation]]
 - [[7. Method#Return value|Return]]
 - [[12. Exception Handling|Exception Handling]]
