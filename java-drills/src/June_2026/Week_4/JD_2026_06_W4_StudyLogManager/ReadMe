@@ -1,0 +1,30 @@
+ReadMe
+
+Drill ID: JD_2026_06_W4_StudyLogManager
+
+Class Name: StudyLogManager
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 45–60 minutes
+
+Actual Time Taken: 47 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a console-based Study Log Manager that allows the user to add study logs,
+view all logs, calculate total study time, and save logs to a file.
+
+Program Flow
+The main method creates a Scanner and a StudyLogService. It repeatedly shows a menu,
+receives user input, creates StudyLog objects, and calls StudyLogService methods.
+
+Class Responsibilities
+StudyLogMain controls the console menu and user input.
+StudyLog stores one study session.
+StudyLogService manages multiple logs, calculations, and file saving.
+
+Object Collaboration
+StudyLogMain creates StudyLog objects and passes them to StudyLogService.
+StudyLogService stores and processes those objects.

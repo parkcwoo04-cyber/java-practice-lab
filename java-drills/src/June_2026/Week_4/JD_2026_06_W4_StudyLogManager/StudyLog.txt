@@ -1,0 +1,3 @@
+Java,50,Studied String concepts.
+Python,50,Studied Refactoring concepts.
+Physics,50,Studied torque concepts.
