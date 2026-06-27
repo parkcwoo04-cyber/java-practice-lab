@@ -1,0 +1,30 @@
+ReadMe
+
+Drill ID: JD_2026_06_W4_LibraryBorrowTracker
+
+Class Name: LibraryBorrowTracker
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 45–60 minutes
+
+Actual Time Taken: 48 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a console-based library borrow tracking program.
+
+Program Flow
+LibraryMain creates a Scanner and one LibraryService object. The main method controls
+the menu and calls LibraryService methods. LibraryService owns the book list and performs
+all book-related operations.
+
+Class Responsibilities
+LibraryMain controls the menu only.
+Book represents one book.
+LibraryService manages the collection of books.
+
+Object Collaboration
+LibraryMain calls LibraryService. LibraryService creates and manages Book objects.
+LibraryMain must not directly manage ArrayList<Book>.
