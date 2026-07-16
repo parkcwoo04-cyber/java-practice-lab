@@ -1,0 +1,27 @@
+ReadMe
+
+Drill ID: JD_2026_07_W2_TravelBudgetManager
+
+Class Name: TravelBudgetManager
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 70–90 minutes
+
+Actual Time Taken: 78 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a travel budget management program that stores expenses,
+calculates spending, checks the budget status, and prints a summary.
+
+Program Flow
+Create one Trip, add several Expense objects, and ask the Trip
+to calculate and print the final result.
+
+Class Responsibilities
+TravelBudgetMain controls the execution order.
+Trip manages expenses and all trip-level calculations.
+Expense represents one spending record.
+ExpenseCategory defines the allowed categories.
