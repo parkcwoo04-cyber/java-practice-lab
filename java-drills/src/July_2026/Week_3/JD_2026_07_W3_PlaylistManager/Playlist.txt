@@ -1,0 +1,8 @@
+Bohemian Rhapsody,Queen,355,ROCK
+Always,Daniel Ceasar,225,RNB
+Body,Don Toliver,156,HIP_HOP
+Drowning,Woodz,193,ROCK
+Nokia,Drake,175,HIP_HOP
+360,Chali xcx,154,ELECTRONIC
+24K Magic,Bruno Mars,205,POP
+Like Jennie,Jennie,217,POP
