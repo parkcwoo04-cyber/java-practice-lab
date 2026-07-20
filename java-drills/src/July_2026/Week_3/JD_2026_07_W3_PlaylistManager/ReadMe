@@ -1,0 +1,27 @@
+ReadMe
+
+Class Name: PlaylistManagerMain
+
+Difficulty: Level 3 — Interactive Object-Oriented Application
+
+Estimated Time: 80–110 minutes
+
+Actual Time Taken: 87 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create an interactive playlist manager that allows users to add,
+view, search, and remove songs, view a summary, and save the
+summary to a text file.
+
+Program Flow
+Create a Scanner and Playlist, repeatedly display the menu,
+process the selected action, and stop when the user selects Exit.
+
+Class Responsibilities
+PlaylistManagerMain handles input and menu flow.
+Playlist manages songs and summary calculations.
+Song represents one song.
+MusicGenre defines allowed genres.
+PlaylistFileWriter writes summary text to a file.
