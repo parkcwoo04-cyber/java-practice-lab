@@ -1,0 +1,39 @@
+ReadMe
+
+Class Name: EquipmentRentalConsole
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 75–90 minutes
+
+Actual Time Taken: 86 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a community workshop equipment rental system that protects valid
+equipment state, rejects invalid operations, calculates return fees, and
+separates domain logic from console output.
+
+Program Flow
+Create a RentalService, register equipment, perform valid and invalid rental
+operations, filter equipment by status, and print a final report and summary.
+
+Class Responsibilities
+- EquipmentRentalConsole: Coordinates the demonstration and prints results.
+- Equipment: Owns and protects one item's rental state.
+- RentalService: Manages the equipment collection and delegates operations.
+- RentalStatus: Defines allowed equipment states.
+- InvalidRentalOperationException: Represents expected rule violations.
+
+Requirements
+- Invalid object data and invalid state transitions must be rejected.
+- Equipment and RentalService must not print user-facing messages.
+- The service must use List<Equipment> and protect its internal collection.
+- Main must demonstrate all required edge cases.
+- The final report must show item details and counts for every status.
+
+Learning Objective
+Practice encapsulation, valid object state, enum-based state transitions,
+collection interfaces, custom exceptions, return values, and responsibility
+separation in a multi-class Java program.
