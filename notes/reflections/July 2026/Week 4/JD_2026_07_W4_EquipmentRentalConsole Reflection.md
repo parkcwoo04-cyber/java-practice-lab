@@ -123,8 +123,6 @@ equipment.startMaintenance();
 
 The exact method names can differ. The important point is that validation and related field updates happen together inside `Equipment`.
 
----
-
 ### Constructor validation is caught inside the constructor
 
 The constructor currently does this:
@@ -145,8 +143,6 @@ When invalid data is provided, the constructor catches the exception and finishe
 The invalid object may then be passed to `registerEquipment()`, where other methods assume its fields are valid.
 
 The constructor should validate first and allow the exception to leave the constructor. That prevents an invalid object from being created successfully.
-
----
 
 ### Domain classes print messages and catch their own business exceptions
 
@@ -173,7 +169,6 @@ The assignment specifically required `Equipment` and `RentalService` not to prin
 
 The service should return useful results or throw an exception. `EquipmentRentalConsole` should catch the exception and decide what to print.
 
----
 
 ### The collection is declared with the concrete implementation type
 
@@ -199,7 +194,6 @@ this.equipmentList = new ArrayList<>();
 
 This separates the type the class depends on from the implementation it chooses.
 
----
 
 ### Renter input is not validated
 
@@ -213,7 +207,6 @@ but the method does not reject `null`, `""`, or blank text.
 
 This permits a rented item to have no meaningful renter, which breaks the intended object state.
 
----
 
 ### Maintenance can be entered but not restored
 
@@ -224,7 +217,6 @@ The requirements included both:
 
 The current code implements entry into maintenance but not restoration. As a result, maintenance becomes a one-way state.
 
----
 
 ### Boolean tracking variables make lookup and state logic harder to follow
 
@@ -247,7 +239,6 @@ Equipment equipment = findById(equipmentId);
 
 Then each operation can focus only on the requested state change.
 
----
 
 ### Method names can express boolean meaning more clearly
 
@@ -310,8 +301,6 @@ Inside that method, validate all conditions before changing fields.
 
 The same principle should be applied to return and maintenance operations.
 
----
-
 ### 2. Do not catch validation exceptions inside the constructor
 
 Change the constructor flow so that invalid data throws immediately:
@@ -325,8 +314,6 @@ if (id == null || id.isBlank()) {
 Only assign fields after all validation has succeeded.
 
 This ensures every successfully created `Equipment` object starts in a valid state.
-
----
 
 ### 3. Let the console handle expected failures
 
@@ -349,8 +336,6 @@ try {
 
 This keeps domain classes reusable and makes the console responsible for presentation.
 
----
-
 ### 4. Return operation data rather than printing it
 
 The return operation should provide the calculated fee:
@@ -362,8 +347,6 @@ int fee = rentalService.returnEquipment("EQ-101", 3);
 The main class can then print the equipment ID, rental days, and fee.
 
 This is an example of using a return value to separate calculation from output.
-
----
 
 ### 5. Depend on `List`, not `ArrayList`
 
@@ -382,8 +365,6 @@ private List<Equipment> equipmentList;
 Keep `new ArrayList<>()` as the internal implementation.
 
 When returning all or filtered equipment, return a newly created list rather than the original internal collection.
-
----
 
 ### 6. Add a single lookup method
 
