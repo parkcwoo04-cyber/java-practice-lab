@@ -1,4 +1,4 @@
-# Equipment Rental Console — Code Review Reflection
+
 
 ## Metadata
 
