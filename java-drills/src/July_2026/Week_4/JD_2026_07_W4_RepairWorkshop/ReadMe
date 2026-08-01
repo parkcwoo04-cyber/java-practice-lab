@@ -1,0 +1,45 @@
+ReadMe
+
+Class Name: RepairWorkshopConsole
+
+Difficulty: Level 4 — Creative OOP Challenge
+
+Estimated Time: 120–150 minutes
+
+Actual Time Taken: 154 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a repair workshop application in which repair jobs protect their own
+workflow state, standard and urgent jobs calculate charges polymorphically,
+the workshop manages jobs through List<RepairJob>, and a storage class saves
+and restores job data.
+
+Program Flow
+Create a workshop, register different repair-job types, execute valid and
+invalid workflow actions, print filtered reports and status counts, save the
+jobs, load them into a new collection, and print the restored data.
+
+Class Responsibilities
+- RepairWorkshopConsole: Coordinates the scenario, catches exceptions, and prints.
+- RepairJob: Owns common data, validates state, and controls workflow transitions.
+- StandardRepairJob: Calculates a standard final charge.
+- UrgentRepairJob: Calculates a final charge with an urgent surcharge.
+- Workshop: Owns the collection, searches jobs, and delegates actions.
+- RepairJobStorage: Converts, saves, and loads repair-job data.
+- JobStatus: Defines valid workflow states.
+- InvalidWorkshopOperationException: Represents expected rule failures.
+
+Requirements
+- Invalid objects must never be created successfully.
+- RepairJob must protect status-controlled fields without public setters.
+- Workshop must delegate transitions and expose no mutable internal list.
+- Business exceptions must reach the console instead of being printed internally.
+- Charge calculation must use overriding and polymorphism.
+- File operations must use try-with-resources and restore concrete subtypes.
+
+Learning Objective
+Practice object invariants, state ownership, exception propagation,
+responsibility separation, polymorphic behavior, collection abstraction,
+defensive copying, and file persistence in an open-ended multi-class design.
