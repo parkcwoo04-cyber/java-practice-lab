@@ -3,6 +3,9 @@ package src.August_2026.Week_1.JD_2026_08_W1_CourseRegistrationSystem;
 public class Main {
     public static void main(String[] args) throws InvalidRegistrationException {
         RegistrationManager manager = new RegistrationManager();
+        FileManager fileManager = new FileManager(manager);
+
+        fileManager.loadFile();
 
         System.out.println("=== Student Registrations ===");
         addStudent(manager, "S001", "Daniel");
@@ -47,6 +50,7 @@ public class Main {
         findPopularCourse(manager);
         manager.printStatistics();
 
+        fileManager.saveFile();
     }
 
     private static void addStudent(RegistrationManager manager, String studentID, String studentName) {

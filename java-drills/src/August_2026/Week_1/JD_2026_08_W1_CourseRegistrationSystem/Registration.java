@@ -32,7 +32,4 @@ public class Registration {
         this.student = student;
     }
 
-    public LocalDate getRegisteredDate() {
-        return registeredDate;
-    }
 }

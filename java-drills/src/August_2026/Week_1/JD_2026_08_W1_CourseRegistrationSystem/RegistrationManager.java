@@ -132,4 +132,16 @@ public class RegistrationManager implements RegistrationService {
         System.out.println("Total registrations: " + totalRegistrations);
         System.out.println();
     }
+
+    public ArrayList<Registration> getRegistrations() {
+        return registrations;
+    }
+
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
 }
