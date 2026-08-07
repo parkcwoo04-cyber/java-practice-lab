@@ -1,0 +1,43 @@
+ReadMe
+
+Drill ID: JD_2026_08_W1_WarehouseManagementSystem
+
+Class Name: WarehouseManagementSystem
+
+Difficulty: Level 4 — Object-Oriented System Design
+
+Estimated Time: 120–180 minutes
+
+Actual Time Taken: 165 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a warehouse inventory management system that manages products, inventory updates,
+search, file persistence, and reporting.
+
+Program Flow
+1. Create a Warehouse.
+2. Load existing inventory.
+3. Create Product objects.
+4. Register products.
+5. Perform stock updates.
+6. Save inventory.
+7. Print the final report.
+
+Class Responsibilities
+- Main: Starts the application and coordinates the overall flow.
+- Warehouse: Manages inventory and business logic.
+- Product: Common product abstraction.
+- FoodProduct / ElectronicProduct: Specialized product types.
+- FileManager: Handles file input/output only.
+- InventoryAction: Defines inventory operations.
+
+Requirements
+- Prevent duplicate product IDs.
+- Throw an exception for invalid stock operations.
+- Save and load inventory from a file.
+
+Learning Objective
+Practice object-oriented design using abstraction, interfaces, polymorphism,
+collections, exception handling, and file I/O.

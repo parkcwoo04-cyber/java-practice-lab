@@ -1,0 +1,4 @@
+P001,Apple,5,10,FOOD
+P003,Chocolate,3,3,FOOD
+P004,Headphone,25,16,ELECTRONIC
+P005,Bluetooth Speaker,30,2,ELECTRONIC
