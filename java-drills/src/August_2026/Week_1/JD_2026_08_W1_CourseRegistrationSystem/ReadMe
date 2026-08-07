@@ -1,0 +1,34 @@
+ReadMe
+
+Class Name: Main
+
+Difficulty: Level 4 — Object-Oriented Scheduling System
+
+Estimated Time: 150–210 minutes
+
+Actual Time Taken: 187 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a university course registration system.
+
+Program Flow
+Create students and courses, register them, save the result,
+reload it, and print the final report.
+
+Class Responsibilities
+- Main: Starts the program.
+- RegistrationManager: Business logic.
+- Student: Student information.
+- Course: Abstract course.
+- Registration: Registration record.
+- FileManager: File persistence.
+
+Requirements
+- Prevent duplicate registrations.
+- Enforce maximum course limit.
+- Save and restore registrations.
+
+Learning Objective
+Practice object-oriented design, collections, inheritance, polymorphism, exception handling, and file I/O.
