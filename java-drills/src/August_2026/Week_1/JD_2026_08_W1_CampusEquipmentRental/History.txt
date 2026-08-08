@@ -1,0 +1,5 @@
+RENT,C101,Daniel,Mirrorless Camera,9 days
+RENT,D101,Kim,Editing Laptop,Gaming
+RETURN,D101,Kim,Editing Laptop,Return
+RENT,D102,Chanwoo,Coding Laptop,Gaming Club
+RENT,C101,Daniel,Mirrorless Camera,8 days
