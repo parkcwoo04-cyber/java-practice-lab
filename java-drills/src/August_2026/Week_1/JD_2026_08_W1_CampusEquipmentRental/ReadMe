@@ -1,0 +1,43 @@
+ReadMe
+
+Class Name: CampusEquipmentRentalApp
+
+Difficulty: Level 4 — Creative OOP Challenge
+
+Estimated Time: 90–120+ minutes
+
+Actual Time Taken: 125 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a console-based campus equipment rental system where different equipment
+types enforce different rental rules, successful operations update object state,
+and rental history is saved to a file.
+
+Program Flow
+Create multiple equipment objects and register them with RentalService.
+Run a Scanner-driven menu that lists equipment, processes rentals and returns,
+shows history, and saves history before the program exits.
+
+Class Responsibilities
+- CampusEquipmentRentalApp: Handles input/output and coordinates the menu flow.
+- Equipment: Defines common equipment state and polymorphic behavior.
+- CameraEquipment / LaptopEquipment: Apply type-specific rental rules.
+- RentalService: Coordinates equipment lookup, state-changing operations, history, and persistence.
+- RentalRecord: Stores successful rental/return events.
+- Rentable: Defines the common rental capability.
+- RentalStatus: Represents valid equipment states.
+- InvalidRentalException: Represents invalid rental operations.
+
+Requirements
+- Store different equipment subclasses in a common collection.
+- Apply different subclass-specific rental rules.
+- Reject invalid state transitions without corrupting state.
+- Create history only for successful operations.
+- Save rental history to a text file on exit.
+
+Learning Objective
+Practice designing object collaboration with inheritance, overriding,
+polymorphism, interfaces, collections, enum-based state, exceptions,
+Scanner input, and file output without relying on pre-written method stubs.
