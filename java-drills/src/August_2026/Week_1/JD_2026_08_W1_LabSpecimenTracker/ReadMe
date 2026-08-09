@@ -1,0 +1,46 @@
+ReadMe
+
+Class Name: SpecimenTrackingApp
+
+Difficulty: Level 3 — Object-Oriented Problem Solving
+
+Estimated Time: 70–90 minutes
+
+Actual Time Taken: 78 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a laboratory specimen chain-of-custody tracker.
+Specimens must move through a controlled workflow and laboratory stations
+must enforce their workload capacity.
+
+Program Flow
+- Create a SpecimenRegistry.
+- Register laboratory stations.
+- Register several specimens.
+- Assign specimens to stations.
+- Start and complete analysis.
+- Archive completed specimens.
+- Trigger several invalid operations and handle their exceptions.
+- Print a final specimen-status report.
+
+Class Responsibilities
+- SpecimenTrackingApp: Runs the scenario, catches business exceptions, and prints output.
+- Specimen: Owns specimen data and protects its workflow state.
+- LabStation: Owns station capacity and active assigned specimens.
+- SpecimenRegistry: Stores/searches objects and coordinates their collaboration.
+- SpecimenStatus: Defines valid specimen workflow states.
+- InvalidSpecimenOperationException: Represents invalid workflow operations.
+
+Requirements
+- Use List reference types for registry collections.
+- Protect specimen status from arbitrary external modification.
+- Keep station capacity and specimen assignment consistent.
+- Propagate business-operation exceptions to this console class.
+- Demonstrate valid and invalid workflow cases.
+- Print a final status summary.
+
+Learning Objective
+Practice object ownership, encapsulation, controlled state transitions,
+collection abstraction, exception propagation, and responsibility separation.
