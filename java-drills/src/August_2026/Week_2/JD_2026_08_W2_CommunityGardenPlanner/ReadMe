@@ -1,0 +1,45 @@
+ReadMe
+
+Drill ID: JD_2026_08_W2_CommunityGardenPlanner
+
+Class Name: CommunityGardenPlanner
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 45–60 minutes
+
+Actual Time Taken: 48 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create a community garden planner that registers gardeners and plots,
+assigns available plots based on preferred size, releases assignments,
+and prints a final garden summary.
+
+Program Flow
+- Create GardenManager.
+- Register plots.
+- Register gardeners.
+- Assign gardeners to suitable plots.
+- Demonstrate failed assignment cases.
+- Release a plot.
+- Print the final summary.
+
+Class Responsibilities
+- CommunityGardenApp: Runs the scenario.
+- Plot: Owns plot identity, size, availability, and current gardener.
+- Gardener: Owns gardener information and current plot assignment.
+- GardenManager: Stores/searches objects and coordinates assignment/release.
+- PlotStatus: Represents plot availability.
+
+Requirements
+- Use List collections in GardenManager.
+- Reject duplicate IDs.
+- Keep Plot and Gardener assignment state synchronized.
+- Match plot size to gardener preference.
+- Print available/occupied counts.
+
+Learning Objective
+Practice multi-class collaboration, List collections, search logic,
+validation, enum usage, and synchronized object state.
