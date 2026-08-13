@@ -1,0 +1,50 @@
+ReadMe
+
+Drill ID: JD_2026_08_W2_DeepSpaceTransmissionControl
+
+Class Name: DeepSpaceTransmissionControl
+
+Difficulty: Level 4 — Creative OOP Challenge
+
+Estimated Time: 100–140 minutes
+
+Actual Time Taken: 154 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Build a deep-space transmission control system that schedules different
+transmission types to capacity-limited ground stations.
+
+Program Flow
+- Create Mission Control.
+- Register stations and multiple transmission subtypes.
+- Schedule and execute transmissions.
+- Handle invalid operations through custom exceptions.
+- Release station capacity when transmissions complete.
+- Archive transmissions.
+- Safely batch-remove archived transmissions from active operations.
+- Print operational reports.
+- Save archived transmission records to a file.
+
+Class Responsibilities
+- MissionControlApp: Console layer and exception handling.
+- Transmission: Owns common transmission data and lifecycle rules.
+- ImageTransmission / TelemetryTransmission: Provide subtype-specific load behavior.
+- GroundStation: Owns station capacity and current assignments.
+- MissionControl: Coordinates object collaboration and collections.
+- TransmissionLogWriter: Persists archived records.
+- InvalidTransmissionOperationException: Represents invalid business operations.
+
+Requirements
+- Protect state transitions inside Transmission.
+- Use polymorphism for communication-load calculation.
+- Keep Transmission and GroundStation state consistent.
+- Do not expose mutable internal collections.
+- Safely remove archived transmissions during batch cleanup.
+- Propagate business exceptions to this application layer.
+
+Learning Objective
+Practice Level 4 object ownership, polymorphism, collection encapsulation,
+safe iteration/removal, multi-object consistency, exception propagation,
+and file persistence.
