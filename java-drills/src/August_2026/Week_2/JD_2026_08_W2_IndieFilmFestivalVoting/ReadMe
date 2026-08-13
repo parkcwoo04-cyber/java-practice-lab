@@ -1,0 +1,45 @@
+ReadMe
+
+Drill ID: JD_2026_08_W2_IndieFilmFestivalVoting
+
+Class Name: IndieFilmFestivalVoting
+
+Difficulty: Level 2 — Multi-Class Application
+
+Estimated Time: 45–60 minutes
+
+Actual Time Taken: 48 minutes
+
+Written by: Chanwoo Park
+
+Problem
+Create an indie film festival audience voting system.
+Registered viewers can rate films from 1 to 10, but each viewer
+may vote for the same film only once.
+
+Program Flow
+- Create FestivalManager.
+- Register films.
+- Register viewers.
+- Record valid and invalid votes.
+- Calculate film averages.
+- Print film results and viewer voting history.
+
+Class Responsibilities
+- FestivalVotingApp: Runs the scenario.
+- Film: Owns film information, ratings, and average calculation.
+- Viewer: Owns viewer information and voting history.
+- FestivalManager: Stores/searches objects and coordinates voting.
+- Genre: Represents film genre.
+
+Requirements
+- Use List collections in FestivalManager.
+- Reject duplicate IDs.
+- Prevent duplicate voting.
+- Keep Film and Viewer state consistent.
+- Validate ratings from 1 to 10.
+- Print final film results and viewer histories.
+
+Learning Objective
+Practice multi-class collaboration, List collections, validation,
+search logic, calculation, enum usage, and object state consistency.
