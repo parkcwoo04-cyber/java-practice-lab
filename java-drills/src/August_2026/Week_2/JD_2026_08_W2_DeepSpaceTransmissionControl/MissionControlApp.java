@@ -1,4 +1,4 @@
-package src.August_2026.Week_2.JD_2026_08_W2_DeepSpaceTransmissionControl.JD_2026_08_W1_DeepSpaceTransmissionControl;
+package src.August_2026.Week_2.JD_2026_08_W2_DeepSpaceTransmissionControl;
 
 public class MissionControlApp {
     public static void main(String[] args) {
